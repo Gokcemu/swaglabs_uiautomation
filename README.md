@@ -1,4 +1,4 @@
-This UI Atuomation BDD Framework works on "https://www.saucedemo.com/" site.
+This UI Automation BDD Framework works on "https://www.saucedemo.com/" site.
 
 Using the technologies:
 
