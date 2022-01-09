@@ -26,7 +26,6 @@ public class BaseTests {
     public static void closeBrowser(){
         webDriver.quit();
     }
-
     public static WebDriver getWebDriver(){
         return webDriver;
     }

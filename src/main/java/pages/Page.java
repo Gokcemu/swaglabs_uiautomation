@@ -11,6 +11,6 @@ public class Page {
       return webDriver;
     }
 
-    String menuItem_Format = ".//li[contains(@class, 'menu-item') and text() = '%s']";
+    String menuItem_Format = ".//li[contains(@class, 'burger-button') and text() = '%s']";
 
 }

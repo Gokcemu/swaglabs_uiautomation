@@ -14,7 +14,7 @@ public class LoginSteps {
 
     private WebDriver webDriver;
     protected LoginPage loginPage;
-    protected Page currentPage;
+
 
     @Given(": User on Login Page")
     public void user_on_login_page() {
@@ -35,7 +35,6 @@ public class LoginSteps {
 
     @Then(": User must navigates the Home Page")
     public HomePage user_must_navigates_the_home_page() {
-
         return new HomePage(webDriver);
     }
 }
