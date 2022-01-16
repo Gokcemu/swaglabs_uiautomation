@@ -1,0 +1,7 @@
+pages\InventoryPage.class
+pages\Page.class
+pages\LoginPage.class
+pages\CartPage.class
+utils\Config.class
+pages\CartItem.class
+pages\InventoryItem.class

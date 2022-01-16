@@ -1,40 +1,35 @@
 package stepdefinitions;
 
+import common.TestBase;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.WebDriver;
-import pages.HomePage;
 import pages.LoginPage;
-import pages.Page;
-import utils.BaseTests;
-
-public class LoginSteps {
-
-    private WebDriver webDriver;
-    protected LoginPage loginPage;
+import pages.InventoryPage;
+import utils.Config;
 
 
+public class LoginSteps extends TestBase {
     @Given(": User on Login Page")
     public void user_on_login_page() {
-        loginPage = new LoginPage(BaseTests.getWebDriver());
+        login = new LoginPage(webDriver);
     }
 
-    @When(": User set username as {string} and password as {string} fields")
-    public void user_set_username_as_and_password_as_fields(String username, String password) {
-        loginPage.setUsername(username);
-        loginPage.setPassword(password);
+    @When(": User set username and password fields")
+    public void user_set_username_and_password_fields() {
+        login.setUsername(Config.DEFAULT_USER);
+        login.setPassword(Config.DEFAULT_PASSWORD);
     }
 
     @And(": User click on login button")
     public void user_click_on_login_button() {
-
-        loginPage.clickLoginButton();
+        login.clickLoginButton();
     }
 
     @Then(": User must navigates the Home Page")
-    public HomePage user_must_navigates_the_home_page() {
-        return new HomePage(webDriver);
+    public InventoryPage user_must_navigates_the_home_page()  {
+
+        return new InventoryPage(webDriver);
     }
 }
